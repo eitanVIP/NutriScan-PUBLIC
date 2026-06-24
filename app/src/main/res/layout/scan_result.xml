@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/scanCardResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="-24dp"
+        android:clipToPadding="false"
+        app:cardCornerRadius="24dp"
+        app:contentPadding="16dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvScanCardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan Result"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvScanCardTitle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvScanCardName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvScanCardBrands"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brands"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Content (100 g):"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <GridLayout
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:layout_gravity="center"
+                    android:rowCount="2"
+                    android:columnCount="2">
+
+                    <FrameLayout
+                        android:layout_width="162.5dp"
+                        android:layout_height="162.5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="12.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/tvScanCardEnergy"
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="#80FFFFFF"
+                            app:cardCornerRadius="16dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            app:cardCornerRadius="16dp"
+                            app:strokeColor="#FFFFFF"
+                            app:strokeWidth="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:text="ENERGY"
+                            android:textColor="@android:color/black"/>
+
+                        <TextView
+                            android:id="@+id/tvScanCardEnergyContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="20sp"
+                            android:text="240 kcal"
+                            android:textColor="@android:color/black"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="162.5dp"
+                        android:layout_height="162.5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="12.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/tvScanCardFat"
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="#80FFEB3B"
+                            app:cardCornerRadius="16dp"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            app:cardCornerRadius="16dp"
+                            app:strokeColor="#FFEB3B"
+                            app:strokeWidth="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:text="FAT"
+                            android:textColor="@android:color/black"/>
+
+                        <TextView
+                            android:id="@+id/tvScanCardFatContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="20sp"
+                            android:text="3 g"
+                            android:textColor="@android:color/black"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="162.5dp"
+                        android:layout_height="162.5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="12.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/tvScanCardSalt"
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="#80FFC107"
+                            app:cardCornerRadius="16dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            app:cardCornerRadius="16dp"
+                            app:strokeColor="#FFC107"
+                            app:strokeWidth="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:text="SALT"
+                            android:textColor="@android:color/black"/>
+
+                        <TextView
+                            android:id="@+id/tvScanCardSaltContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="20sp"
+                            android:text="3 g"
+                            android:textColor="@android:color/black"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="162.5dp"
+                        android:layout_height="162.5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/tvScanCardSugars"
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="#808D7FDE"
+                            app:cardCornerRadius="16dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="162.5dp"
+                            android:layout_height="162.5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            app:cardCornerRadius="16dp"
+                            app:strokeColor="#8D7FDE"
+                            app:strokeWidth="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="18sp"
+                            android:text="SUGARS"
+                            android:textColor="@android:color/black"/>
+
+                        <TextView
+                            android:id="@+id/tvScanCardSugarsContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="20sp"
+                            android:text="11.4 g"
+                            android:textColor="@android:color/black"/>
+
+                    </FrameLayout>
+                </GridLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bcmScanSave"
+                    android:layout_width="300dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="Save"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    app:cornerRadius="40dp"
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:iconSize="24dp"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

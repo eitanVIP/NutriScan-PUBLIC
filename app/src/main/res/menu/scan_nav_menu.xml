@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_scan_barcode"
+        android:title="Barcode" />
+    <item
+        android:id="@+id/nav_scan_ai"
+        android:title="AI Scan" />
+    <item
+        android:id="@+id/nav_scan_receipt"
+        android:title="Receipt" />
+</menu>

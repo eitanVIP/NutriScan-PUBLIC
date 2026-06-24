@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryLight">#2D8A4E</color>
+    <color name="colorPrimaryVariantLight">#1B5E20</color>
+    <color name="colorOnPrimaryLight">#FFFFFF</color>
+
+    <color name="colorSecondaryLight">#F57C00</color>
+    <color name="colorSecondaryVariantLight">#E65100</color>
+    <color name="colorOnSecondaryLight">#FFFFFF</color>
+
+    <color name="colorBackgroundLight">#F8FAF8</color>
+    <color name="colorOnBackgroundLight">#1A1C1A</color>
+    <color name="colorSurfaceLight">#FFFFFF</color>
+    <color name="colorOnSurfaceLight">#1A1C1A</color>
+
+    <color name="colorErrorLight">#BA1A1A</color>
+    <color name="colorOnErrorLight">#FFFFFF</color>
+
+
+    <color name="colorPrimaryDark">#81C784</color>
+    <color name="colorPrimaryVariantDark">#2D8A4E</color>
+    <color name="colorOnPrimaryDark">#003914</color>
+
+    <color name="colorSecondaryDark">#FFB74D</color>
+    <color name="colorSecondaryVariantDark">#F57C00</color>
+    <color name="colorOnSecondaryDark">#4D2700</color>
+
+    <color name="colorBackgroundDark">#111411</color>
+    <color name="colorOnBackgroundDark">#E2E3DE</color>
+    <color name="colorSurfaceDark">#1A1C1A</color>
+    <color name="colorOnSurfaceDark">#E2E3DE</color>
+
+    <color name="colorErrorDark">#FFB4AB</color>
+    <color name="colorOnErrorDark">#690005</color>
+</resources>

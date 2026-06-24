@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.NutriScan" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariantLight</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryLight</item>
+
+        <item name="colorSecondary">@color/colorSecondaryLight</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariantLight</item>
+        <item name="colorOnSecondary">@color/colorOnSecondaryLight</item>
+
+        <item name="backgroundColor">@color/colorBackgroundLight</item>
+        <item name="colorOnBackground">@color/colorOnBackgroundLight</item>
+        <item name="colorSurface">@color/colorSurfaceLight</item>
+        <item name="colorOnSurface">@color/colorOnSurfaceLight</item>
+
+        <item name="colorError">@color/colorErrorLight</item>
+        <item name="colorOnError">@color/colorOnErrorLight</item>
+    </style>
+
+    <style name="Theme.NutriScan" parent="Base.Theme.NutriScan" />
+</resources>

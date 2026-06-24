@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/layoutSettings"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.SettingsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageButton
+                android:id="@+id/bcmSettingsBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_arrow_back"
+                android:background="@android:color/transparent"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                app:tint="?attr/colorOnBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.05" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingVertical="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgSettingsProfile"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:background="#E0E0E0"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile_placeholder"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+                <TextView
+                    android:id="@+id/tvSettingsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jane Doe"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/tvSettingsEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jane.doe@email.com"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="?attr/colorPrimary" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="ACCOUNT" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.eitangrimblat.nutriscan.ui.views.SettingsItemView
+                        android:id="@+id/bcmSettingsProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:titleText="Edit Profile"
+                        app:iconSrc="@drawable/ic_person" />
+
+                    <View style="@style/SettingsDivider" />
+
+                    <com.eitangrimblat.nutriscan.ui.views.SettingsItemView
+                        android:id="@+id/bcmSettingsPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:titleText="Change Password"
+                        app:iconSrc="@drawable/ic_lock" />
+                    
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/SettingsSectionHeader"
+                android:text="PREFERENCES" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/icSettingsTheme"
+                            style="@style/SettingsIcon"
+                            app:srcCompat="@drawable/ic_theme"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/textView"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="16dp"-->
+<!--                            android:text="Theme"-->
+<!--                            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/icSettingsTheme"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+                        <com.google.android.material.button.MaterialButtonToggleGroup
+                            android:id="@+id/bcmSettingsTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            app:checkedButton="@id/bcmSettingsSystem"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:selectionRequired="true"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.None"
+                            app:singleSelection="true">
+
+                            <Button
+                                android:id="@+id/bcmSettingsDark"
+                                style="@style/ButtonGroupButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dark" />
+
+                            <Button
+                                android:id="@+id/bcmSettingsLight"
+                                style="@style/ButtonGroupButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Light" />
+
+                            <Button
+                                android:id="@+id/bcmSettingsSystem"
+                                style="@style/ButtonGroupButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="System" />
+
+                        </com.google.android.material.button.MaterialButtonToggleGroup>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View style="@style/SettingsDivider" />
+
+                    <com.eitangrimblat.nutriscan.ui.views.SettingsItemView
+                        android:id="@+id/bcmSettingsAllergies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:titleText="Dietary Restrictions"
+                        app:iconSrc="@drawable/ic_apple" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bcmSettingsSignout"
+                style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Out"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                app:backgroundTint="#FFEBEE"
+                android:textColor="#D32F2F" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
